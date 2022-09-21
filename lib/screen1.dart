@@ -5,7 +5,8 @@ import 'screen2.dart';
 
 class Screen1 extends StatelessWidget {
 
-  Services service = Get.find<Services>();
+  // Services service = Get.find<Services>();
+  Services servicesObj = Get.find<Services>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,16 +18,21 @@ class Screen1 extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
-            Obx(() {
-              return  Text( "${service.num}"
-          );
-        }),
+            Obx(() => Text("${servicesObj.num}")),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
 
-            Center(
-              child: ElevatedButton(onPressed: (){
-                service.IncreaseNum();
-              },
-                  child: Text("Increment +")),
+                ElevatedButton(
+                    onPressed: (){ servicesObj.increment(); } ,
+                    child: Text("Increment +")),
+
+                ElevatedButton(
+                    onPressed: (){
+                      servicesObj.decrement();
+                    },
+                    child: Text("Decrement -"))
+              ],
             )
 
           ],
