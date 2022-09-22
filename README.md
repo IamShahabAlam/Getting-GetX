@@ -3,8 +3,21 @@
 Flutter (3.0.3)
 
 ## Features
+SS
 
  - To be updated... 
+ - Object
+ - Classes
+ - Function
+ - GetxController
+ - Instantiating
+ - Obs/Obx
+ - Counter App
+ - Snackbar
+ - DialogBox
+ - BottomSheet
+ - Device Height/Width
+ - Theme 
 
 ### Theme Colors:
   - Purple
@@ -53,4 +66,4 @@ Flutter (3.0.3)
 <br/>
             
 
-> :blue_heart: &nbsp; Fluttering
+> :blue_heart:  Fluttering

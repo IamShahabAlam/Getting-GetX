@@ -5,20 +5,41 @@ import 'screen2.dart';
 
 class Screen1 extends StatelessWidget {
 
-  // Services service = Get.find<Services>();
   Services servicesObj = Get.find<Services>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text("SCREEN 1"),
+        title: Text("GetX App"),
+        actions: [
+          TextButton(
+              onPressed: (){
+            servicesObj.BottomSheet();
+          },
+              child: Icon(Icons.filter_list))
+        ],
       ),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
-            Obx(() => Text("${servicesObj.num}")),
+
+            Row(
+              children: [
+                Text("Switch App Theme"),
+                ElevatedButton(onPressed: (){ servicesObj.Theme();}, child: Icon(Icons.light_mode_outlined)),
+              ],
+            ),
+            
+            Container(
+              alignment: Alignment.center,
+              height: Get.size.height*0.08,
+              width: Get.size.width*0.3,
+              color: Colors.purple,
+                child: Text("Screen 1" , style: TextStyle(fontSize: 25, color: Colors.white),)),
+
+            Obx(() => Text("${servicesObj.num}" ,style: TextStyle(fontSize: 25,),)),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
@@ -30,6 +51,8 @@ class Screen1 extends StatelessWidget {
                 ElevatedButton(
                     onPressed: (){
                       servicesObj.decrement();
+
+                      servicesObj.snack();
                     },
                     child: Text("Decrement -"))
               ],

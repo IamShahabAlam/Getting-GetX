@@ -9,7 +9,6 @@ void main() {
 
 class MyApp extends StatelessWidget {
 
-  // final Services service = Get.put(Services());
   final Services servicesObj = Get.put(Services());
 
   @override

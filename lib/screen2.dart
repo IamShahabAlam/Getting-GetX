@@ -11,14 +11,27 @@ class Screen2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Screen 2".toUpperCase()),
+        title: Text("GetX App"),
+        actions: [
+          TextButton(
+              onPressed: (){ servicesObj.Dialogbox();},
+              child: Icon(Icons.logout,color: Colors.white,))
+        ],
       ),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
+
+          Container(
+              alignment: Alignment.center,
+              height: Get.size.height*0.08,
+              width: Get.size.width*0.3,
+              color: Colors.purple,
+                  child: Text("Screen 2", style: TextStyle(fontSize: 25.0,color: Colors.white ),)),
+
           GestureDetector(
-            onTap: (){ Get.to(Screen1());},
-            child: Center(child: Text("${servicesObj.num}")),
+            onTap: (){ Get.back();},
+            child: Center(child: Text("${servicesObj.num}", style: TextStyle(fontSize: 25),)),
           )
         ],
       ),
