@@ -6,6 +6,7 @@ import 'package:getx_app/services.dart';
 
 class Screen2 extends StatelessWidget {
 
+  var data = Get.arguments;
   Services servicesObj = Get.find<Services>();
   @override
   Widget build(BuildContext context) {
@@ -29,8 +30,10 @@ class Screen2 extends StatelessWidget {
               color: Colors.purple,
                   child: Text("Screen 2", style: TextStyle(fontSize: 25.0,color: Colors.white ),)),
 
+          Text("Passed Data : $data"),
+
           GestureDetector(
-            onTap: (){ Get.back();},
+            onTap: (){  Get.to( () => Screen1(), arguments: ["Shahab", "22", "Fluttering 24/7"]);},
             child: Center(child: Text("${servicesObj.num}", style: TextStyle(fontSize: 25),)),
           )
         ],

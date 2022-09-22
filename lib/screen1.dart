@@ -5,6 +5,7 @@ import 'screen2.dart';
 
 class Screen1 extends StatelessWidget {
 
+  var data = Get.arguments;
   Services servicesObj = Get.find<Services>();
   @override
   Widget build(BuildContext context) {
@@ -39,6 +40,8 @@ class Screen1 extends StatelessWidget {
               color: Colors.purple,
                 child: Text("Screen 1" , style: TextStyle(fontSize: 25, color: Colors.white),)),
 
+            Text("Passed String Data : $data"),
+
             Obx(() => Text("${servicesObj.num}" ,style: TextStyle(fontSize: 25,),)),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -62,7 +65,7 @@ class Screen1 extends StatelessWidget {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: (){ Get.to(Screen2());},
+        onPressed: (){ Get.to(() => Screen2() , arguments: "Data from the Screen 1");},
         tooltip: 'Increment',
         child: Icon(Icons.navigate_next),
       ),
