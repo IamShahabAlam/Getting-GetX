@@ -25,7 +25,7 @@ class Services extends GetxController{
         backgroundColor: Colors.grey[200],
         borderColor: Color(0xffA020F0),
         borderWidth: 2.0,
-        borderRadius: 50,
+        borderRadius: 0.0,
         dismissDirection: DismissDirection.horizontal,
         isDismissible: true,
         overlayColor: Colors.grey.withOpacity(0.5),
@@ -39,7 +39,14 @@ class Services extends GetxController{
     Dialogbox(){
      Get.defaultDialog(
       title: "LogOut",
-      content: Text("Do you want to logout ?"),
+      content: Column(
+        children: [
+          CircularProgressIndicator(strokeWidth: 10.0 , ),
+          SizedBox(height: 10.0,),
+          Text("Do you want to logout ?"),
+        ],
+      ),
+
       actions: [
         TextButton(
             onPressed: (){},
@@ -51,22 +58,31 @@ class Services extends GetxController{
        ],
       );
     }
-    
+
+
     BottomSheet(){
       Get.bottomSheet(
           Column( mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
+              Text("Select Theme", style: TextStyle(fontSize: 22.0, color: Colors.white),),
+              TextButton(
+                  onPressed: (){
+                    Get.changeTheme(ThemeData.light());
+                                },
+                  child: Text("☀ Light Theme")),
 
-              Text("Select The State Management", style: TextStyle(fontSize: 22.0),),
-              Text("GetX",),
-              Text("BLoC",),
-              Text("Provider",),
-              Text("RiverPod",),
+              TextButton(
+                  onPressed: (){
+                Get.changeTheme(ThemeData.dark());
+              },
+                  child: Text("🌙 ️ Dark Theme"))
             ],
           ),
 
-        backgroundColor: Colors.purple,
+        // Properties comes after the Parameters
+        backgroundColor: Colors.grey,
         barrierColor: Colors.black.withOpacity(0.6),
+        enableDrag: true,
       );
     }
 

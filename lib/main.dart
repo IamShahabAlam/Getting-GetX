@@ -1,6 +1,11 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_app/screen1.dart';
+import 'package:getx_app/screen2.dart';
+import 'package:getx_app/screen3.dart';
+import 'package:getx_app/screen4.dart';
 import 'services.dart';
 
 void main() {
@@ -14,6 +19,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
+      initialRoute: "/screen1",
+      getPages: [
+        GetPage(name: "/main", page: () => MyApp()),
+        GetPage(name: "/screen1", page: () => Screen1()),
+        GetPage(name: "/screen2", page: () => Screen2()),
+        GetPage(name: "/screen3", page: () => Screen3()),
+        GetPage(name: '/screen4/:City', page: () => Screen4()),
+      ],
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.purple,
