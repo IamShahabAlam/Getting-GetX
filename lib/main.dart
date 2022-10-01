@@ -6,6 +6,7 @@ import 'package:getx_app/screen1.dart';
 import 'package:getx_app/screen2.dart';
 import 'package:getx_app/screen3.dart';
 import 'package:getx_app/screen4.dart';
+import 'package:getx_app/wrongRoute.dart';
 import 'services.dart';
 
 void main() {
@@ -21,12 +22,13 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       initialRoute: "/screen1",
+      unknownRoute: GetPage(name: "/wrong", page: () => WrongRoute()),
       getPages: [
         GetPage(name: "/main", page: () => MyApp()),
         GetPage(name: "/screen1", page: () => Screen1()),
         GetPage(name: "/screen2", page: () => Screen2()),
         GetPage(name: "/screen3", page: () => Screen3()),
-        GetPage(name: '/screen4/:City', page: () => Screen4()),
+        GetPage(name: '/screen4/:City', page: () => Screen4()),   // Passing data with parameter
       ],
       title: 'Flutter Demo',
       theme: ThemeData(

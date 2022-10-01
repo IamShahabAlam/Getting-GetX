@@ -40,7 +40,10 @@ class Screen2 extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.arrow_forward_ios , color: Colors.white,),
-        onPressed: (){ Get.toNamed( '/screen3?Name=Shahab Alam&Age=22'); },  // Passing Parameters (As Website's URL)
+        onPressed: (){
+          Get.toNamed('/lulu');           // Testing unknowRoute
+          // Get.toNamed( '/screen3?Name=Shahab Alam&Age=22');
+          },  // Passing Parameters (As Website's URL)
       ),
     );
   }
