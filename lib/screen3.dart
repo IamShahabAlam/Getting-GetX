@@ -7,6 +7,10 @@ class Screen3 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    final _h = MediaQuery.of(context).size.height;
+    final _w = MediaQuery.of(context).size.width;
+    
     return Scaffold(
       appBar: AppBar(
         title: Text("GetX App"),
@@ -21,8 +25,8 @@ class Screen3 extends StatelessWidget {
               margin: EdgeInsets.symmetric(vertical: 10.0),
               alignment: Alignment.center,
               color: Colors.purple,
-                height: Get.size.height*0.08,
-                width: Get.size.width*0.3,
+                height: _h*0.08,
+                width: _w*0.3,
                 child: Text("Screen 3" , style: TextStyle(fontSize: 25 , color: Colors.white),)),
           ),
 
@@ -46,8 +50,8 @@ class Screen3 extends StatelessWidget {
       ),
 
       floatingActionButton: SizedBox(
-        width: Get.size.width*0.25,
-        height: Get.size.width*0.08 ,
+        width: _w*0.25,
+        height: _w*0.08 ,
         child: FloatingActionButton(
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
           child: Row( mainAxisAlignment: MainAxisAlignment.spaceEvenly,

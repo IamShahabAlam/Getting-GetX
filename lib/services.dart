@@ -7,6 +7,16 @@ class Services extends GetxController{
 
   var num = 1.obs;  // Obs makes it dynamic/Reactive/Observable (it will update the var in app)
 
+  // Declaring variable by all (3) ways
+  // 1st
+  // var name = RxString("Shahab Alam");
+
+  //2nd
+  // var name = Rx<String>("Shahab Alam");
+
+  //3rd
+  RxString name = "Shahab Alam".obs;
+
   increment(){
     num += 1;
   }

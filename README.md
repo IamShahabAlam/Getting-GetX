@@ -17,12 +17,16 @@ Flutter (3.0.3)
  - Device Height/Width
  - Theme 
  - Routing 
+   - Unknown Route
  - Arguments (String , List) (Keyless)
  - Parameters  (With Key) 
    - 2 Methods 
      - Inline parameter 
      - Separate Parameter
+ - 3 ways to declare var
+ - Custom/Userdefined Class Observable
  - Continue...
+
 
 ### Theme Colors:
   - Purple

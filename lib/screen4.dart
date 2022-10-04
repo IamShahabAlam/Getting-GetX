@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx_app/services.dart';
 
 class Screen4 extends StatelessWidget {
+
+  Services servicesObj = Get.find<Services>();
 
   @override
   Widget build(BuildContext context) {
@@ -32,6 +35,27 @@ class Screen4 extends StatelessWidget {
               Text("City : ${Get.parameters["City"]}"),
             ],
           )),
+
+          Obx(() => Text("My name is ${servicesObj.name}") ),
+          Row( mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+
+              ElevatedButton(
+                  onPressed: (){
+                    servicesObj.name.value = servicesObj.name.value.toLowerCase();
+                  },
+                  child: Text("Lower Case")),
+
+
+              ElevatedButton(
+                  onPressed: (){
+                    servicesObj.name.value = servicesObj.name.value.toUpperCase();
+                  },
+                  child: Text("Upper Case")),
+
+
+            ],
+          )
 
         ],
       ),

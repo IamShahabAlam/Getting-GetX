@@ -12,54 +12,41 @@ class WrongRoute extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-            SizedBox(height: Get.size.height*0.08,),
+            SizedBox(height: Get.context.height*0.08,),
             Center(child:
                Image.network( "https://i.ibb.co/VVXYrRW/wrong-Route.gif",
                    alignment : Alignment.center,
+                 height: Get.context.height*0.6,
+                 width: Get.context.width*0.7,
                )),
+/// COPYYYYYY MEDIAQUERY
+            SizedBox(height: Get.context.height*0.1),
 
-            Container(
-              color: Colors.transparent,
-              height: Get.size.height*0.07,
-              width: Get.size.width*0.3,
-              margin: EdgeInsets.all(20.0),
+            Center(
+              child: HoverButton(
+                elevation: 0.0,
+                color: Colors.transparent,
+                hoverColor: Color(0xffB4E59F) ,
+                hoverTextColor: Color(0xff5c7dbe),
+                hoverElevation: 0.0,
+                textColor: Color(0xffB5CFFF),
+                splashColor: Color(0xffB5CFFF),
+                shape: StadiumBorder(side: BorderSide(color:  Color(0xffB4E59F) , width: 3.0 )) ,
+                onpressed:(){ Get.back(); },
 
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  surfaceTintColor: Color(0xffB4E59F),
-                  // onSurface: Color(0xffB4E59F) ,
-                  shadowColor : Colors.transparent ,
-                  elevation: 0.0,
-                  onPrimary: Color(0xffB5CFFF),
-                  primary: Colors.transparent,
-                    shape: StadiumBorder(side: BorderSide(color: Color(0xffB4E59F) , width: 3.0  ))
+                child: Container(
+                  height: Get.context.height*0.1,
+                  width: Get.context.width*0.3,
+                  child: Row( mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Icon(Icons.arrow_back_ios_new ),
+                      Text("Back",style: TextStyle(fontSize: 22.0 , fontWeight: FontWeight.bold),),
+                    ],),
                 ),
-                onPressed: (){ Get.back(); },
-                child: Row( mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                  Icon(Icons.arrow_back_ios_new),
-                  Text("Back",style: TextStyle(fontSize: 22.0 , fontWeight: FontWeight.bold),),
-                ],),
+
               ),
             ),
 
-            HoverButton(
-              elevation: 0.0,
-              color: Colors.transparent,
-              hoverColor: Color(0xffB4E59F) ,
-              hoverTextColor: Color(0xffB5CFFF),
-              onpressed:(){ Get.back(); },
-              child: Container(
-                height: Get.size.height*0.07,
-                width: Get.size.width*0.3,
-                child: Row( mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Icon(Icons.arrow_back_ios_new),
-                    Text("Back",style: TextStyle(fontSize: 22.0 , fontWeight: FontWeight.bold),),
-                  ],),
-              ),
-
-            ),
           ],
         ),
       ),

@@ -9,6 +9,10 @@ class Screen1 extends StatelessWidget {
   Services servicesObj = Get.find<Services>();
   @override
   Widget build(BuildContext context) {
+
+    final _h = MediaQuery.of(context).size.height;
+    final _w = MediaQuery.of(context).size.width;
+
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -35,10 +39,16 @@ class Screen1 extends StatelessWidget {
             
             Container(
               alignment: Alignment.center,
-              height: Get.size.height*0.08,
-              width: Get.size.width*0.3,
+              height: MediaQuery.of(context).size.height*0.08,
+              width: MediaQuery.of(context).size.width*0.3,
               color: Colors.purple,
                 child: Text("Screen 1" , style: TextStyle(fontSize: 25, color: Colors.white),)),
+
+
+                Text("Screen Height : ${_h} \n\n Screen Width : ${_w}"),
+
+
+
 
             Text("Passed String Data From screen2 : $data"),
 
