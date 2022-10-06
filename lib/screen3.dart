@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx_app/services.dart';
 
 class Screen3 extends StatelessWidget {
 
@@ -46,11 +47,21 @@ class Screen3 extends StatelessWidget {
             ),
           ),
 
+          // Getx of type Controller
+
+          GetX<Services>(       //  without initiating in Stl Widget
+            init: Services(),
+            builder: (Services)
+            {
+              return Text("By Getx Of Type Controller: \n\n My Name is ${Services.name}");
+            }
+          ),
+
         ],
       ),
 
       floatingActionButton: SizedBox(
-        width: _w*0.25,
+        width: _w*0.25 ,
         height: _w*0.08 ,
         child: FloatingActionButton(
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),

@@ -44,11 +44,7 @@ class Screen1 extends StatelessWidget {
               color: Colors.purple,
                 child: Text("Screen 1" , style: TextStyle(fontSize: 25, color: Colors.white),)),
 
-
                 Text("Screen Height : ${_h} \n\n Screen Width : ${_w}"),
-
-
-
 
             Text("Passed String Data From screen2 : $data"),
 

@@ -14,11 +14,11 @@ class Services extends GetxController{
   //2nd
   // var name = Rx<String>("Shahab Alam");
 
-  //3rd
+  //3rd  (Most East , Preferred )
   RxString name = "Shahab Alam".obs;
 
   increment(){
-    num += 1;
+    num++;
   }
 
   decrement(){
@@ -99,4 +99,16 @@ class Services extends GetxController{
     Theme(){
       Get.changeTheme(Get.isDarkMode?ThemeData.light():ThemeData.dark());
     }
+
+ // ---------------------------------------------------------
+    // Simple State Manager
+
+    int count = 10;
+
+  simpleIncrement(){
+    count++;
+
+    update();       // it updates the widget
+  }
+
 }

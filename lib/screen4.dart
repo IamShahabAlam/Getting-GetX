@@ -8,6 +8,9 @@ class Screen4 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final _h = MediaQuery.of(context).size.height;
+    final _w = MediaQuery.of(context).size.width;
+
     return Scaffold(
         appBar:  AppBar(
           title: Text("GetX App"),
@@ -37,7 +40,7 @@ class Screen4 extends StatelessWidget {
           )),
 
           Obx(() => Text("My name is ${servicesObj.name}") ),
-          Row( mainAxisAlignment: MainAxisAlignment.spaceAround,
+          Row( mainAxisAlignment: MainAxisAlignment.center,
             children: [
 
               ElevatedButton(
@@ -46,6 +49,7 @@ class Screen4 extends StatelessWidget {
                   },
                   child: Text("Lower Case")),
 
+              SizedBox(width: _w*0.1,),
 
               ElevatedButton(
                   onPressed: (){
@@ -58,6 +62,23 @@ class Screen4 extends StatelessWidget {
           )
 
         ],
+      ),
+
+      floatingActionButton: SizedBox(
+        width: _w*0.25 ,
+        height: _w*0.08 ,
+        child: FloatingActionButton(
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
+          child: Row( mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Text("Screen 5"),
+              Icon(Icons.arrow_forward_ios,),
+            ],
+          ),
+          onPressed: (){
+            Get.toNamed("/screen5");
+          },
+        ),
       ),
     );
 
