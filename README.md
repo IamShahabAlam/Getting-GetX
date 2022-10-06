@@ -2,11 +2,17 @@
 
 Flutter (3.0.3)
 
-## Features
+
+<img src="https://user-images.githubusercontent.com/82330891/194287281-34a9367d-b46e-42a3-bca7-510208dc8a74.gif" /> 
+
+<img src="https://i.ibb.co/6bk9XrK/Getting-Getx.gif" /> 
+
+## Topics
 
  - Object
  - Classes
  - Function
+ - Reactive State Manager
  - GetxController
  - Instantiating
  - Obs/Obx
@@ -25,6 +31,10 @@ Flutter (3.0.3)
      - Separate Parameter
  - 3 ways to declare var
  - Custom/Userdefined Class Observable
+ - Getx <Type of Controller>
+ - Simple State Manager
+ - GetBuilder
+ - 
  - Continue...
 
 
@@ -32,7 +42,6 @@ Flutter (3.0.3)
   - Purple
 
 
-<img src="https://images.velog.io/images/giyeon/post/5835a6cc-9aca-435a-b6ba-878fe1d03705/KakaoTalk_Photo_2021-05-12-11-18-13.png" /> 
 
 
 <!-- ## Result Screen -->
