@@ -5,7 +5,6 @@ Flutter (3.0.3)
 
 <img src="https://user-images.githubusercontent.com/82330891/194287281-34a9367d-b46e-42a3-bca7-510208dc8a74.gif" /> 
 
-<img src="https://i.ibb.co/6bk9XrK/Getting-Getx.gif" /> 
 
 ## Topics
 
