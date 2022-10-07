@@ -48,6 +48,45 @@ class Screen5 extends StatelessWidget {
               },
               child: Text("Simple Increment +")),
 
+
+          // ---------------------------------------------------------
+
+          Text("GetX Controller Lifecycle Method" , style: TextStyle(fontWeight: FontWeight.bold),),
+
+          GetBuilder<Services>(
+              builder: (servicesObj) {
+            return Text("${servicesObj.count}");
+          } ),
+
+          // Unique ID with GetBuilder
+
+          Container(
+            padding: EdgeInsets.all(20.0),
+            alignment: Alignment.center,
+            color: Colors.purple.withOpacity(0.6),
+            height: _h*0.25,
+              width: _w*0.8,
+              child: Column(
+                children: [
+                  Text("Unique Id with GetBuilder", style: TextStyle(fontWeight: FontWeight.bold),),
+                  SizedBox(height: 20,),
+                  Row( mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      GetBuilder<Services>(builder: (servicesObj) { return Text("Initial Value : ${servicesObj.count}"); }),
+                      Divider(height: 20 ,thickness: 20.0, color: Colors.white,),
+
+                      GetBuilder<Services>( id: "updated" , builder: (servicesObj) => Text("Updated Value : ${servicesObj.count}"))
+                    ],
+                  ),
+
+                  SizedBox(height: 20,),
+                  ElevatedButton(onPressed: (){ servicesObj.updateCount();},
+                      child: Text("Update +"))
+                ],
+              )),
+
+
+
     ],),
 
       // ---------------------------------------------------------

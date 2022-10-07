@@ -7,6 +7,7 @@ class Screen1 extends StatelessWidget {
 
   var data = Get.arguments;   // saving arguments from screen 2 in var data
   Services servicesObj = Get.find<Services>();
+
   @override
   Widget build(BuildContext context) {
 

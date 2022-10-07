@@ -30,10 +30,11 @@ Flutter (3.0.3)
      - Separate Parameter
  - 3 ways to declare var
  - Custom/Userdefined Class Observable
- - Getx <Type of Controller>
+ - Getx <Type of Controller> widget
  - Simple State Manager
  - GetBuilder
- - 
+ - Controller Lifecycle
+ - Unique ID
  - Continue...
 
 
@@ -84,4 +85,6 @@ Flutter (3.0.3)
 
 &nbsp;
 
-> :blue_heart:  Fluttering
+<!-- > :blue_heart:  Fluttering -->
+
+<img src="https://user-images.githubusercontent.com/82330891/194625802-c331a436-975f-438e-8883-3242dc55c15d.gif" />

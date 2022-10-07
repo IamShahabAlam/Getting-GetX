@@ -5,7 +5,16 @@ import 'package:get/get.dart';
 
 class Services extends GetxController{
 
-  var num = 1.obs;  // Obs makes it dynamic/Reactive/Observable (it will update the var in app)
+  RxInt num = 1.obs;  // Obs makes it dynamic/Reactive/Observable (it will update the var in app)
+
+  increment(){
+    num++;
+  }
+
+  decrement(){
+    num -= 1;
+  }
+
 
   // Declaring variable by all (3) ways
   // 1st
@@ -17,13 +26,6 @@ class Services extends GetxController{
   //3rd  (Most East , Preferred )
   RxString name = "Shahab Alam".obs;
 
-  increment(){
-    num++;
-  }
-
-  decrement(){
-    num -= 1;
-  }
 
    snack(){
     Get.snackbar(
@@ -109,6 +111,31 @@ class Services extends GetxController{
     count++;
 
     update();       // it updates the widget
+  }
+
+
+
+  // Lifecycle Methpd
+
+  @override
+  void onInit() {                   // On initialise
+      print("On Initialise method Called");
+      count == 100;                 // count will be = 100 when Controller is called
+    super.onInit();
+  }
+
+@override
+  void onClose() {                // On Close
+        print("onClose method is called");
+        count == 50;
+     super.onClose();
+  }
+
+// Unique Id
+
+  updateCount(){
+    count+= 5;
+    update(["updated"]);
   }
 
 }
