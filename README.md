@@ -35,7 +35,7 @@ Flutter (3.0.3)
  - GetBuilder
  - Controller Lifecycle
  - Unique ID
- - Continue...
+ - Continue....
 
 
 ### Theme Colors:
