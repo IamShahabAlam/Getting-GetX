@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx_app/services.dart';
 
 class Screen6 extends StatelessWidget {
-
+  
+  Services servicesObj = Get.find<Services>();
+  
   @override
   Widget build(BuildContext context) {
     final _h = MediaQuery.of(context).size.height;
@@ -26,6 +29,36 @@ class Screen6 extends StatelessWidget {
                 child: Text("Screen 6", style: TextStyle(fontSize: 25.0, color:Colors.white),),
               ),
             ),
+        
+            Container(
+              alignment: Alignment.center,
+              height: _h*0.3,
+              width: _w*0.8,
+              color: Colors.purple.withOpacity(0.3),
+              child: Column(
+                children: [
+                  SizedBox(height: _h*0.01,),
+                  Text ("WORKERS"),
+
+                  SizedBox(height: _h*0.03,),
+                  Text("Debounce"),
+
+                  SizedBox(height: _h*0.02,),
+                  Text("${servicesObj.num}"),
+                  
+                  Container(
+                    margin: EdgeInsets.symmetric(horizontal: 60),
+                    child: TextField(
+                      decoration: InputDecoration(focusColor: Colors.purple,
+                      fillColor: Colors.purple.withOpacity(0.1)),
+                      onChanged: (val){ servicesObj.increment(); },
+                    ),
+                  )
+
+                ],
+              ),
+            ),
+
 
           ],
         ),

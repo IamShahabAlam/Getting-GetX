@@ -117,10 +117,31 @@ class Services extends GetxController{
 
   // Lifecycle Methpd
 
+  // @override
+  // void onInit() {                   // On initialise
+  //     print("On Initialise method Called");
+  //     count == 100;                 // count will be = 100 when Controller is called
+  //   super.onInit();
+  // }
+
+  // ------------ WORKERS ---------------
   @override
-  void onInit() {                   // On initialise
-      print("On Initialise method Called");
-      count == 100;                 // count will be = 100 when Controller is called
+  void onInit() {
+    // TODO: implement onInit
+
+    // WORKERS
+
+      // ever(num, (_) => print("num ($num) is called "));
+
+     // everAll([num , name], (_) => print("$name or $num changed"));  // list of listeners
+
+      // once(num, (_) => print(num));  // only called once4
+
+    // debounce(num, (_) => print("Send request after 1 sec when stop typing") , time: Duration(seconds: 1));  // for searching
+
+    interval(num, (_) => print("print after given interval") , time: Duration(seconds: 3)); // ignore changes in given duration
+
+
     super.onInit();
   }
 
@@ -137,5 +158,7 @@ class Services extends GetxController{
     count+= 5;
     update(["updated"]);
   }
+
+
 
 }
