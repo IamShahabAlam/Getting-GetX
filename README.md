@@ -37,6 +37,9 @@ Flutter (3.0.3)
  - Unique ID
  - Workers
    - ever, everAll, once, debounce, interval.
+ - Internationalization
+   - translation (Translation Class , .tr , LangCode_CountryCode)
+   - locale
  - Continue...
 
 

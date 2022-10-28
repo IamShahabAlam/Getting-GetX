@@ -158,7 +158,32 @@ class Services extends GetxController{
     count+= 5;
     update(["updated"]);
   }
+// Internationalization -------------------
 
-
+  void translate(param1, param2) {         // ( language , country ) (Param = Parameter)
+    var locale = Locale(param1, param2);
+    Get.updateLocale(locale);
+  }
 
 }
+
+// Internationalization
+class Messages extends Translations{
+  @override
+  Map<String, Map<String, String>> get keys =>  {
+  "en_US": {"Hello Pakistan": "Hello Pakistan",},       // Language code , country code :
+  "ur_PK": {'Hello Pakistan' : 'سلام پاکستان',},
+  "ch_CH": {"Hello Pakistan": '萨拉姆巴基斯坦',},
+  "kr_KR": {'Hello Pakistan' : '살람 파키스탄',},
+  "gr_GR": {'Hello Pakistan' : 'σαλάμ Πακιστάν',},
+  };
+}
+
+
+
+
+
+
+
+
+

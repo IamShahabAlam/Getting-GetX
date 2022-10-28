@@ -22,6 +22,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      translations: Messages(),  // my class which holds messages in all languages (Internationalization)
+      locale: Locale("en", "US"), // setting default language
+      //locale: Get.deviceLocale,   // Gets device default language
+      fallbackLocale: Locale("en", "US"),   // when doesn't find right device lang , switches to here this
       debugShowCheckedModeBanner: false,
       initialRoute: "/screen1",
       unknownRoute: GetPage(name: "/wrong", page: () => WrongRoute()),

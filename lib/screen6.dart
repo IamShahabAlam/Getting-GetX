@@ -29,21 +29,21 @@ class Screen6 extends StatelessWidget {
                 child: Text("Screen 6", style: TextStyle(fontSize: 25.0, color:Colors.white),),
               ),
             ),
-        
+
+  // WORKERS    ----------------------
             Container(
               alignment: Alignment.center,
-              height: _h*0.3,
+              padding: EdgeInsets.all(20),
+              // height: _h*0.18,
               width: _w*0.8,
               color: Colors.purple.withOpacity(0.3),
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  SizedBox(height: _h*0.01,),
-                  Text ("WORKERS"),
+                  Text ("WORKERS" , style: TextStyle( fontSize:18 , fontWeight: FontWeight.bold, color: Colors.purple),),
 
-                  SizedBox(height: _h*0.03,),
                   Text("Debounce"),
 
-                  SizedBox(height: _h*0.02,),
                   Text("${servicesObj.num}"),
                   
                   Container(
@@ -58,6 +58,42 @@ class Screen6 extends StatelessWidget {
                 ],
               ),
             ),
+
+   // INTERNATIONALIZATION    ------------------
+            Container(
+              alignment: Alignment.center,
+              // padding: EdgeInsets.all(20),
+              height: _h*0.4,
+              width: _w*0.8,
+              color: Colors.purple.withOpacity(0.3),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  // SizedBox(height: _h*0.01,),
+                  Text("INTERNATIONALIZATION" , style: TextStyle( fontSize:20 , fontWeight: FontWeight.bold, color: Colors.purple),),
+
+                  Text("Hello Pakistan".tr , style: TextStyle( fontSize:18 , fontWeight: FontWeight.bold),),
+
+                  Row( mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      ElevatedButton(onPressed: (){ servicesObj.translate("en", "US");  }, child: Text("English")),
+
+                      ElevatedButton(onPressed: (){ servicesObj.translate("ur", "PK"); }, child: Text("Urdu")),
+
+                      ElevatedButton(onPressed: (){ servicesObj.translate("ch", "CH"); } , child: Text("Chinese")),
+
+                      ElevatedButton(onPressed: (){ servicesObj.translate("kr", "KR"); }, child: Text("Korean")),
+
+                      ElevatedButton(onPressed: (){ servicesObj.translate("gr", "GR"); }, child: Text("Greek")),
+                    ],
+                  ),
+
+
+                ],
+              ),
+            )
+
+
 
 
           ],
