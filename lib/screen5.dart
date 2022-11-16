@@ -64,7 +64,7 @@ class Screen5 extends StatelessWidget {
             padding: EdgeInsets.all(20.0),
             alignment: Alignment.center,
             color: Colors.purple.withOpacity(0.6),
-            height: _h*0.25,
+            // height: _h*0.25,
               width: _w*0.8,
               child: Column(
                 children: [
@@ -92,8 +92,8 @@ class Screen5 extends StatelessWidget {
       // ---------------------------------------------------------
 
       floatingActionButton: SizedBox(
-        width: _w*0.25 ,
-        height: _w*0.08 ,
+        width: _w*0.35 ,
+        height: _w*0.1 ,
         child: FloatingActionButton(
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
           child: Row( mainAxisAlignment: MainAxisAlignment.spaceEvenly,

@@ -40,6 +40,9 @@ Flutter (3.0.3)
  - Internationalization
    - translation (Translation Class , .tr , LangCode_CountryCode)
    - locale
+ - Dependency Injection
+   - Get.put , lazyput , putAsnc , create
+ - GetX Service
  - Continue...
 
 

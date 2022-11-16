@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_app/screen1.dart';
@@ -8,6 +6,7 @@ import 'package:getx_app/screen3.dart';
 import 'package:getx_app/screen4.dart';
 import 'package:getx_app/screen5.dart';
 import 'package:getx_app/screen6.dart';
+import 'package:getx_app/screen7.dart';
 import 'package:getx_app/wrongRoute.dart';
 import 'services.dart';
 
@@ -37,6 +36,7 @@ class MyApp extends StatelessWidget {
         GetPage(name: '/screen4/:City', page: () => Screen4()),   // Passing data with parameter
         GetPage(name: "/screen5", page: () => Screen5()),    // Simple State Manager
         GetPage(name: "/screen6", page: () => Screen6()),
+        GetPage(name: "/screen7", page: () => Screen7()),
       ],
       title: 'Flutter Demo',
       theme: ThemeData(

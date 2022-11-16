@@ -79,14 +79,21 @@ class Screen6 extends StatelessWidget {
                       ElevatedButton(onPressed: (){ servicesObj.translate("en", "US");  }, child: Text("English")),
 
                       ElevatedButton(onPressed: (){ servicesObj.translate("ur", "PK"); }, child: Text("Urdu")),
+                    ],
+                  ),
+
+                  Row( mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
 
                       ElevatedButton(onPressed: (){ servicesObj.translate("ch", "CH"); } , child: Text("Chinese")),
 
                       ElevatedButton(onPressed: (){ servicesObj.translate("kr", "KR"); }, child: Text("Korean")),
 
                       ElevatedButton(onPressed: (){ servicesObj.translate("gr", "GR"); }, child: Text("Greek")),
+
                     ],
                   ),
+
 
 
                 ],
@@ -100,7 +107,7 @@ class Screen6 extends StatelessWidget {
         ),
 
       floatingActionButton: SizedBox(
-        width: _w*0.25 ,
+        width: _w*0.32 ,
         height: _w*0.08 ,
         child: FloatingActionButton(
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),

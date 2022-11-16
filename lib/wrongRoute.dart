@@ -14,10 +14,13 @@ class WrongRoute extends StatelessWidget {
           children: [
             SizedBox(height: Get.context.height*0.08,),
             Center(child:
-               Image.network( "https://i.ibb.co/VVXYrRW/wrong-Route.gif",
+               Image.network(
+                 "https://user-images.githubusercontent.com/82330891/201894928-484d551c-2a27-48f5-9e22-1aeb6051a21e.gif",
+                 // "https://ibb.co/31tmG2y",
+                 // "https://i.ibb.co/VVXYrRW/wrong-Route.gif",
                    alignment : Alignment.center,
                  height: Get.context.height*0.6,
-                 width: Get.context.width*0.7,
+                 width: Get.context.width*0.8,
                )),
 /// COPYYYYYY MEDIAQUERY
             SizedBox(height: Get.context.height*0.1),
