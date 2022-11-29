@@ -1,4 +1,4 @@
-# Getx_app
+# getx_app
 
 Flutter (3.0.3)
 
@@ -43,6 +43,8 @@ Flutter (3.0.3)
  - Dependency Injection
    - Get.put , lazyput , putAsnc , create
  - GetX Service
+ - Bindings
+   - initial Binding , implements Binding , AllBindings().dependencies(); 
  - Continue...
 
 
@@ -72,6 +74,12 @@ Flutter (3.0.3)
 <div class="social-icons-image">
 <a href="https://twitter.com/IamShahabAlam">
 <img  align = "left" src="https://pngimg.com/uploads/twitter/twitter_PNG3.png" style = "height:35px;" alt="Twitter Icon"></a></div>
+
+<a  href="https://www.linkedin.com/in/iamshahabalam">
+
+<img  align="left"  alt="LinkedIn"  width="24px"  src="https://cdn-icons-png.flaticon.com/512/1377/1377213.png" />
+
+</a>
             
  <div class="social-icons-image">
      <a  href="mailto:IamshahabAlam@gmail.com">
@@ -95,4 +103,4 @@ Flutter (3.0.3)
 
 <!-- > :blue_heart:  Fluttering -->
 
-<img src="https://user-images.githubusercontent.com/82330891/194625802-c331a436-975f-438e-8883-3242dc55c15d.gif" />
+<img src="https://user-images.githubusercontent.com/82330891/194625802-c331a436-975f-438e-8883-3242dc55c15d.gif" height= "30"/>

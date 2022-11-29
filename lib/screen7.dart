@@ -47,7 +47,10 @@ class Screen7 extends StatelessWidget {
 
           ElevatedButton(
               onPressed: (){ Get.find<PermServices>().incrementCounter(); },
-              child: Text("Increment"))
+              child: Text("Increment")),
+
+
+          Text("From All Binding: ${Get.find<Screen7Controller>().name} ") , 
 
 
 

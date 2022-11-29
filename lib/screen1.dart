@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_app/services.dart';
+import 'components.dart';
 import 'screen2.dart';
 
 class Screen1 extends StatelessWidget {
@@ -26,6 +27,7 @@ class Screen1 extends StatelessWidget {
               child: Icon(Icons.filter_list))
         ],
       ),
+
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -44,7 +46,7 @@ class Screen1 extends StatelessWidget {
               width: MediaQuery.of(context).size.width*0.3,
               color: Colors.purple,
                 child: Text("Screen 1" , style: TextStyle(fontSize: 25, color: Colors.white),)),
-
+    
                 Text("Screen Height : ${_h} \n\n Screen Width : ${_w}"),
 
             Text("Passed String Data From screen2 : $data"),
@@ -68,11 +70,33 @@ class Screen1 extends StatelessWidget {
               ],
             ),
 
+            Row( mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                PageNavBtn(name: "1", pagename: "/screen1"),
+                PageNavBtn(name: "2", pagename: "/screen2"),
+                PageNavBtn(name: "3", pagename: "/screen3"),
+                PageNavBtn(name: "4", pagename: "/screen4/Karachi"),
+
+              ],
+            ),
+
+            Row( mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              PageNavBtn(name: "5", pagename: "/screen5"),
+              PageNavBtn(name: "6", pagename: "/screen6"),
+              PageNavBtn(name: "7", pagename: "/screen7"),
+              PageNavBtn(name: "8", pagename: "/screen8"),
+
+            ],),
+
+
+
             
 
           ],
         ),
       ),
+      
       floatingActionButton: FloatingActionButton(
         onPressed: (){
           Get.to(() => Screen2() ,

@@ -40,6 +40,7 @@ class Screen4 extends StatelessWidget {
           )),
 
           Obx(() => Text("My name is ${servicesObj.name}") ),
+          
           Row( mainAxisAlignment: MainAxisAlignment.center,
             children: [
 
@@ -59,7 +60,7 @@ class Screen4 extends StatelessWidget {
 
 
             ],
-          )
+          ),
 
         ],
       ),
