@@ -1,6 +1,6 @@
 # getx_app
 
-Flutter (3.0.3)
+Flutter (3.3.3)
 
 
 <img src="https://user-images.githubusercontent.com/82330891/194287281-34a9367d-b46e-42a3-bca7-510208dc8a74.gif" /> 
@@ -41,10 +41,11 @@ Flutter (3.0.3)
    - translation (Translation Class , .tr , LangCode_CountryCode)
    - locale
  - Dependency Injection
-   - Get.put , lazyput , putAsnc , create
+   - Get.put , lazyput , putAsync , create
  - GetX Service
  - Bindings
    - initial Binding , implements Binding , AllBindings().dependencies(); 
+ - Data Domain Layer Architecture
  - Continue...
 
 
@@ -94,8 +95,8 @@ Flutter (3.0.3)
 
 
 
-<a  href="https://www.buymeacoffee.com/IamShahabAlam">
-<img   alt="BuyMeACoffee"  width="30px"  src="https://cdn.dribbble.com/users/3349322/screenshots/14039201/media/1d43324ff4b1a3850533fdbb823b8b59.png?compress=1&resize=768x576&vertical=top" /></a>
+<!-- <a  href="https://www.buymeacoffee.com/IamShahabAlam">
+<img   alt="BuyMeACoffee"  width="30px"  src="https://cdn.dribbble.com/users/3349322/screenshots/14039201/media/1d43324ff4b1a3850533fdbb823b8b59.png?compress=1&resize=768x576&vertical=top" /></a> -->
 
 <br/>
 
@@ -103,4 +104,4 @@ Flutter (3.0.3)
 
 <!-- > :blue_heart:  Fluttering -->
 
-<img src="https://user-images.githubusercontent.com/82330891/194625802-c331a436-975f-438e-8883-3242dc55c15d.gif" height= "30"/>
+<img src="https://user-images.githubusercontent.com/82330891/194625802-c331a436-975f-438e-8883-3242dc55c15d.gif" height= "40"/>
